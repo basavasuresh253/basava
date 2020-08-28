@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: task-pvc-pod
+  name: task-pvc-pod2
 spec:
   volumes:
     - name: task-pv-storage
@@ -9,7 +9,7 @@ spec:
         claimName: my-pvc2
   containers:
     - name: task-pv-container
-      image: nginx
+      image: http
       ports:
         - containerPort: 80
           name: "http-server"

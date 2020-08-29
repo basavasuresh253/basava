@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-pvc2
+  name: task-pv-claim
 spec:
-  storageClassName: standard
-  volumeName: my-pv
+  storageClassName: manual
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 512Mi

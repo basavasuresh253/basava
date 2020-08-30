@@ -3,11 +3,11 @@ kind: Pod
 metadata:
   name: pod1
   labels:
+     tier: web
      app: nginx
 spec:
   containers:
   - name: nginx 
-    tier: web
     image: nginx
     ports:
      - containerPort: 80

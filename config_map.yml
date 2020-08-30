@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-env
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      ports:
+        - containerPort: 80
+      env:
+        - name: db_h
+          valueFrom:
+            configMapKeyRef:
+              name: db-connection
+              key: db_h.txt
+        - name: db_p
+          valueFrom:
+            configMapKeyRef:
+              name: db-connection
+              key: db_p.txt
+  restartPolicy: Never

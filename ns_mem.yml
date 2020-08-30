@@ -4,5 +4,7 @@ metadata:
   name: tenant-b-100mi
 spec:
   hard:    
-    requests.memory: 50mi    
-    limits.memory: 100mi
+    requests.cpu: "1"
+    requests.memory: 1Gi
+    limits.cpu: "2"
+    limits.memory: 2Gi

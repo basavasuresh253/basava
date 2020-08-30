@@ -4,7 +4,7 @@ metadata:
   name: pod2
   labels:
      app: nginx
-      tier: App
+     tier: App
 spec:
   containers:
   - name: nginx 

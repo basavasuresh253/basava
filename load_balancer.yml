@@ -26,7 +26,6 @@ kind: Service
 metadata:
   name: my-service
 spec:
-  type: ClusterIP  ## this is default if we do not type in service definition
   selector:
     tier: frontend
   ports:
